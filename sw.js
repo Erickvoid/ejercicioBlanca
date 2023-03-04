@@ -136,7 +136,7 @@ self.addEventListener("activate", (e) => {
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheNames) => {
-            if (cacheWhiteList.indexOf(cacheName) == -1) {
+            if (cacheWhiteList.indexOf(cacheNames) == -1) {
               return cache.delete(cacheNames);
             }
           })
